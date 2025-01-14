@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=4 uid="uid://c5n1nuey52hko"]
+
+[ext_resource type="Texture2D" uid="uid://cbmwbv7mpsaef" path="res://Assets/Crypt/Textures/colormap.png" id="1_jts0a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hyvu2"]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("1_jts0a")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wuq2g"]
+_surfaces = [{
+"aabb": AABB(-0.0225, 0, -0.0225, 0.045, 0.7339, 0.045),
+"format": 34896613377,
+"index_count": 66,
+"index_data": PackedByteArray("AgAAAAEAAQAAAAMABAABAAMAAQAEAAIABQAAAAIAAgAGAAUABAADAAcABwAIAAQAAAAFAAcABwADAAAABAAIAAYABgACAAQACAAJAAoACgAGAAgACgAJAAsACwAMAAoABQAMAAsACwAHAAUACgAMAAUABQAGAAoACAAHAAsACwAJAAgA"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 13,
+"vertex_data": PackedByteArray("AACU5wAAAAD/f////38AAAAAlOf//wAA//+U5wAAAAD//5Tn//8AAKoqoNmqKgAAqiqg2VTVAABU1aDZqioAAFTVoNlU1QAAVNUAAFTVAACqKgAAVNUAAFTVAACqKgAAqioAAKoqAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wy776"]
+resource_name = "iron-fence-bar_iron-fence-bar"
+_surfaces = [{
+"aabb": AABB(-0.0225, 0, -0.0225, 0.045, 0.7339, 0.045),
+"attribute_data": PackedByteArray("/9dHy//XZcb/10fL/9dHy//XR8v/12XG/9dlxv/XR8v/10fL/9dHy//XR8v/12XG/9dHy//XR8v/1xLO/9cSzv/XR8v/1xLO/9dHy//XEs7/1xLO/9cSzv/XR8v/10fL/9cSzv/XEs7/10fL/9dHy/+XmLn/l5i5/5cSjv+XEo7/l5i5/5eYuf+XmLn/l5i5/5eYuf+XmLn/lxKO/5cSjv+XmLn/lxKO/5eYuf+XEo7/lxKO/5eYuf+XEo7/l5i5"),
+"format": 34896613399,
+"index_count": 66,
+"index_data": PackedByteArray("AgAAAAEABQADAAQACAAGAAcACwAJAAoADgAMAA0ADQAPAA4AEgAQABEAEQATABIAFgAUABUAFQAXABYAGgAYABkAGQAbABoAHgAcAB0AHQAfAB4AIgAgACEAIQAjACIAJgAkACUAJQAnACYAKgAoACkAKQArACoALgAsAC0ALQAvAC4A"),
+"material": SubResource("StandardMaterial3D_hyvu2"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("AACU5wAABsD/f////3/5wAAAlOf//wbAAACU5wAA/////5TnAAD///9/////f////3////9/+cD//5TnAAAGwP//lOf//wbA//+U5///HIIAAJTn//8cgv9/////f6uMAACU5wAABsAAAJTn//8GwKoqoNmqKljAqiqg2VTVWMD//5TnAAAGwFTVoNmqKljA//+U5///BsBU1aDZVNVYwKoqoNmqKv//VNWg2aoq//8AAJTnAAD/////lOcAAP//VNWg2VTVjIeqKqDZVNWMh///lOf//xyCAACU5///HIJU1QAAVNUAgKoqAABU1QCAVNWg2VTVAICqKqDZVNUAgFTVAABU1f+/VNUAAKoq/7+qKgAAVNX/v6oqAACqKv+/qioAAKoq//9U1QAAqir//6oqoNmqKv//VNWg2aoq//+qKgAAqir/v6oqoNmqKv+/qioAAFTV/7+qKqDZVNX/v1TVoNmqKv+/VNUAAKoq/79U1aDZVNX/v1TVAABU1f+/KIOt+UaPceEog635/3/B/P9/wfz/f6bujJ5GD1CGKANQhigD////f////3////9/KIOt+SiDrfnva/b172v29VCGKAP3dRAUUIYoA/d1EBThiv//4Yr///9/wfz/f8H8AAD/fwAA/3////9/////f/9/////f////3////9///8AAP9/AAD/fwAA/38AAP9//3////9/////f////3////9/////f////3////9/////fwAA/38AAP9/AAD/fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_wuq2g")
+
+[node name="iron-fence-bar2" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="iron-fence-bar" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_wy776")
+skeleton = NodePath("")

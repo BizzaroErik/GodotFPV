@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlq5xrk1fwceo"]
+
+[ext_resource type="PackedScene" uid="uid://c4b0tdyl6py3l" path="res://Assets/Models/GLB format/trunk-long.glb" id="1_k5l1g"]
+[ext_resource type="PackedScene" uid="uid://rtwoxxnwj0wa" path="res://Assets/Models/GLB format/trunk.glb" id="2_mjpry"]
+[ext_resource type="PackedScene" uid="uid://dsexocxrbmiar" path="res://Assets/Models/GLB format/pine-crooked.glb" id="3_nxdjr"]
+
+[node name="Trees" type="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="trunk-long2" parent="." instance=ExtResource("1_k5l1g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.389653, -0.0138216, 0.18474)
+
+[node name="trunk-long3" parent="." instance=ExtResource("1_k5l1g")]
+transform = Transform3D(0.778828, 0, 0.18283, 0, 0.8, 0, -0.18283, 0, 0.778828, -1.26632, -0.0138216, -1.86584)
+
+[node name="trunk2" parent="." instance=ExtResource("2_mjpry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.863858, 0.00468636, -0.944394)
+
+[node name="pine-crooked2" parent="." instance=ExtResource("3_nxdjr")]
+transform = Transform3D(0.970224, 0, 0.24221, 0, 1, 0, -0.24221, 0, 0.970224, 0, 0, -2)
+
+[node name="pine-crooked4" parent="." instance=ExtResource("3_nxdjr")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -1.07891, 0, -0.822354)
+
+[node name="pine-crooked3" parent="." instance=ExtResource("3_nxdjr")]
+transform = Transform3D(-1.19342, 0, 0.908712, 0, 1.5, 0, -0.908712, 0, -1.19342, 1.62371, 0, 0)
+
+[node name="pine-crooked5" parent="." instance=ExtResource("3_nxdjr")]
+transform = Transform3D(1.15736, -0.0615664, 0.952217, 0.167795, 1.48668, -0.107823, -0.939336, 0.189712, 1.15397, -0.961032, 0, 1.34672)
+
+[node name="pine-crooked6" parent="." instance=ExtResource("3_nxdjr")]
+transform = Transform3D(0.46017, -0.0244789, -1.63635, 0.0903044, 1.6976, 0, 1.63404, -0.0869234, 0.46082, 0.865063, 0, 1.83714)
