@@ -28,6 +28,9 @@ func process_input(event: InputEvent) -> State:
 		#Captures vertical change across the y axis of the mouse, applied to the camera's x axis which extends forward and back and rotates up and down
 		player.camera.rotate_x(deg_to_rad(-event.relative.y * look_sense))
 		player.camera.rotation.x = clamp(player.camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
+	
+	if Input.is_action_just_pressed("jump") and player.is_on_floor():
+		return jumping_state
 	return null
 
 func process_frame(delta: float) -> State:
@@ -38,8 +41,7 @@ func process_physics(delta: float) -> State:
 	if not player.is_on_floor():
 		player.velocity += player.get_gravity() * delta
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and player.is_on_floor():
-		player.velocity.y = JUMP_VELOCITY
+
 	if Input.is_action_pressed("sprint"):
 		speed = SPRINT_SPEED
 	else:

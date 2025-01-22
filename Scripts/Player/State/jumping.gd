@@ -9,6 +9,7 @@ var jump_direction: Vector3
 var can_jump: bool = true
 
 func enter() -> void:
+	player.velocity.y = JUMP_VELOCITY
 	var input_dir := Input.get_vector("left", "right", "up", "down")
 	# input_dir returns a Vector2  (left/right -1 to 1, up/down -1 to 1), we want to alway ignore
 	# remove head.transform.basis to remove the look ability to change jump direction

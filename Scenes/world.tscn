@@ -1548,3 +1548,8 @@ transform = Transform3D(-1.73205, 0, -1, 0, 2, 0, 1, 0, -1.73205, -25.2219, -1, 
 
 [node name="Trees153" parent="TreeBorder" instance=ExtResource("14_wblhv")]
 transform = Transform3D(-1.73205, 0, -1, 0, 2, 0, 1, 0, -1.73205, -22.2219, -1, 43.7593)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(0.846286, -0.532729, 0, 0.532729, 0.846286, 0, 0, 0, 1, 8, -1.83197, 16)
+use_collision = true
+size = Vector3(4, 4, 4)

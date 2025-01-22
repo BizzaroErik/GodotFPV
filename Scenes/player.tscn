@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvk1br1q2sb0r"]
+[gd_scene load_steps=9 format=3 uid="uid://bvk1br1q2sb0r"]
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_0yhlo"]
 [ext_resource type="Script" path="res://Scripts/Player/State/state_machine.gd" id="2_gx4py"]
 [ext_resource type="Script" path="res://Scripts/Player/State/idle.gd" id="3_2gvbo"]
 [ext_resource type="Script" path="res://Scripts/Player/State/jumping.gd" id="3_ajvst"]
 [ext_resource type="Script" path="res://Scripts/Player/State/running.gd" id="4_ip0my"]
+[ext_resource type="Script" path="res://Scripts/falling.gd" id="6_bwcwx"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_id2r2"]
 
@@ -44,3 +45,6 @@ jumping_state = NodePath("../Jumping")
 script = ExtResource("3_ajvst")
 idle_state = NodePath("../Idle")
 running_state = NodePath("../Running")
+
+[node name="Falling" type="Node" parent="state_machine"]
+script = ExtResource("6_bwcwx")
