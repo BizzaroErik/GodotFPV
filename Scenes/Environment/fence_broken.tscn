@@ -41,17 +41,15 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_vo408")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hflmp"]
-size = Vector3(1, 0.820465, 1)
+size = Vector3(1, 1, 0.18)
 
-[node name="Node3D" type="Node3D"]
+[node name="iron-fence-damaged" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
 
-[node name="iron-fence-damaged2" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, 0.5)
-
-[node name="iron-fence-damaged" type="MeshInstance3D" parent="iron-fence-damaged2"]
+[node name="iron-fence-damaged" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_jskl8")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="iron-fence-damaged2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.2, 0, 0.398087, -0.480274)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.398087, -0.480274)
 shape = SubResource("BoxShape3D_hflmp")

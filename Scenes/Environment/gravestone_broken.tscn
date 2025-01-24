@@ -43,6 +43,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wpu6v")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mrjsa"]
+size = Vector3(0.5, 0.5, 0.25)
 
 [node name="GravestoneBroken" type="StaticBody3D"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
@@ -52,5 +53,5 @@ mesh = SubResource("ArrayMesh_upwxr")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.36, 0, 0, 0, 0.42, 0, 0, 0, 0.2, 0, 0.2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 shape = SubResource("BoxShape3D_mrjsa")

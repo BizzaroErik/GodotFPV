@@ -40,19 +40,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_pkdo1")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_nvsdc"]
-size = Vector3(1, 0.806885, 0.0393066)
+[sub_resource type="BoxShape3D" id="BoxShape3D_nhe8o"]
+size = Vector3(1.05725, 1, 0.0720215)
 
 [node name="Fence" type="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="iron-fence2" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.45)
 
 [node name="iron-fence" type="MeshInstance3D" parent="iron-fence2"]
 mesh = SubResource("ArrayMesh_54pkn")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.404808, 0.041626)
-shape = SubResource("BoxShape3D_nvsdc")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0142212, 0, -0.0020752)
+shape = SubResource("BoxShape3D_nhe8o")

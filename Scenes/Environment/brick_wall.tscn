@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://42fn1rarqffr"]
+[gd_scene load_steps=6 format=4 uid="uid://42fn1rarqffr"]
 
 [ext_resource type="Texture2D" uid="uid://cbmwbv7mpsaef" path="res://Assets/Crypt/Textures/colormap.png" id="1_t4h7e"]
-[ext_resource type="Script" path="res://Scripts/brick_wall.gd" id="1_xchts"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehb7i"]
 resource_name = "colormap"
@@ -44,15 +43,12 @@ shadow_mesh = SubResource("ArrayMesh_gkwmq")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7bmb6"]
 points = PackedVector3Array(0.5, 0.701914, -0.342923, 0.446554, 0.470645, -0.327013, 0.5, 0.0899379, -0.32, 0.5, 0.701914, -0.477095, -0.5, 0.701914, -0.342923, 0.305599, 0.470645, -0.327013, 0.5, 0, -0.32, -0.5, 0.0899379, -0.32, 0.5, 0.0899379, -0.5, -0.0802662, 0.518534, -0.493005, -0.5, 0.701914, -0.477095, -0.29444, 0.370676, -0.327013, 0.5, 0, -0.5, -0.5, 0, -0.32, -0.5, 0.0899379, -0.5, -0.221222, 0.518534, -0.493005, -0.5, 0, -0.5)
 
-[node name="BrickWall" type="Node3D" groups=["Wall"]]
-script = ExtResource("1_xchts")
-
-[node name="brick-wall" type="StaticBody3D" parent="."]
+[node name="brick-wall" type="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.41)
 
-[node name="brick-wall" type="MeshInstance3D" parent="brick-wall"]
+[node name="brick-wall" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_wlwqr")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="brick-wall"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConvexPolygonShape3D_7bmb6")
