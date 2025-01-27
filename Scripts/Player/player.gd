@@ -12,6 +12,7 @@ const FOV_CHANGE = 1.3
 signal player_hit
 
 @onready var state_machine: Node = $state_machine
+var health = 5
 
 func _ready():
 	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -29,4 +30,5 @@ func _process(delta: float) -> void:
 
 func hit(dir):
 	emit_signal("player_hit")
+	health -= 1
 	velocity += dir * HIT_STAGGER
